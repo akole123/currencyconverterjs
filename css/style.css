@@ -1,0 +1,75 @@
+.box select{
+    background: #fff;
+    color: #1C94C0;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    outline: none;
+} 
+#display{
+    text-align: center;
+    color: #1C9FC0;
+}
+#swap {
+    background: #eee;
+    color: #1C94C0;
+    border: none;
+    font-size: 220%;
+
+}
+#amount,#outputAmount{
+    color: #1C94C0;
+    border-radius: 10px;
+    border: none;
+    border-radius: 10px;
+}
+body > h1{  
+    text-align: center;
+    color: #1C94C0;
+}
+body{
+    background: #3531A6;
+}
+.wrapper{
+    border-radius: 20px;
+    width: 100%;
+    max-width: 900px;
+    min-height: 500px;
+    margin: 0 auto;
+    background: #eee;
+}
+.box{
+    display:flex; 
+    height:70px;
+    flex-wrap: wrap;
+    margin: auto;
+    flex: 0 1 auto;
+    justify-content: right;
+    /* flex: 1 0 0px; */
+    text-align: center;
+
+}
+.fa-arrow-alt-circle-right {
+    margin: auto;
+    min-width: 300px;
+    min-height: 50px;
+}
+
+#from-currency,#amount,[name=amount],#to-currency{
+    max-width: 150px;
+}
+.fa-exchange-alt{
+    min-width: 100px;
+}
+
+@media screen and (max-width: 650px){
+    .fa-arrow-alt-circle-right, .fa-exchange-alt,[name=amount],#from-currency,#to-currency,#amount{
+        margin: auto;
+        min-width: 450px;
+    } 
+    #amount,#outputAmount{
+        min-height: 30px;
+    }
+
+}
