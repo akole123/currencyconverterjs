@@ -20,7 +20,6 @@ document.getElementById('button').addEventListener('click', () => {
             //We can be sure there is only one pair of values in data.list because of the API call link.
             for (var key in data.list) {
                 if (data.list.hasOwnProperty(key)) {
-                    ui.outputResult(data.list[key] * parseFloat(userInput.value));
                     ui.showOutPut(document.getElementById('from-currency').value, document.getElementById('to-currency').value, parseFloat(userInput.value), data.list[key]);
                 }
             }

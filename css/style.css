@@ -1,75 +1,138 @@
-.box select{
-    background: #fff;
-    color: #1C94C0;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    font-size: 17px;
-    outline: none;
-} 
-#display{
+body::after{
+    background-image:url('../background.jpg');
+    opacity: 0.5;
+    z-index: -1;
+    content: "";
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+body h1{
     text-align: center;
-    color: #1C9FC0;
+    color: #1352A5;
+    font-size: 60px;
 }
-#swap {
-    background: #eee;
-    color: #1C94C0;
-    border: none;
-    font-size: 220%;
-
-}
-#amount,#outputAmount{
-    color: #1C94C0;
-    border-radius: 10px;
-    border: none;
-    border-radius: 10px;
-}
-body > h1{  
-    text-align: center;
-    color: #1C94C0;
-}
-body{
-    background: #3531A6;
-}
-.wrapper{
-    border-radius: 20px;
-    width: 100%;
-    max-width: 900px;
-    min-height: 500px;
+.outerlayer{
+    position: relative; 
+    align-items: center;
+    justify-content: center; 
     margin: 0 auto;
-    background: #eee;
+    /* display: block; */
 }
-.box{
-    display:flex; 
-    height:70px;
+.container{
+    width: 1050px;
+    height: 80vh;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2em;
+    /* display:flex; */
+}
+.container::after{
+    background-color: #1352A5;
+    opacity: 0.8;
+    z-index: -1;
+    content: "";
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+.outerlayer .container .labelbox{
+    display:flex;
     flex-wrap: wrap;
-    margin: auto;
-    flex: 0 1 auto;
-    justify-content: right;
-    /* flex: 1 0 0px; */
+}
+.outerlayer .container .labels{
+    position:relative;
+    color: #fff;
+    width: 260px;
+    height: 60px;
+}
+.outerlayer .container .labels h3{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.outerlayer .container .labelfilter{
+    margin: 5px 10px 0 0;
+    padding-top: 7px;
+    min-width: 50px;
+    height: 60px;
+}
+.outerlayer .container .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container .wrapper .box{
+    width: 260px;
+    height: 60px;
+    margin: 5px 10px 0 0;
+    border-radius: 10px;
+}
+.container .wrapper .buttonbox1{
+    margin: 5px 10px 0 0;
+    padding-top: 7px;
+    min-width: 50px;
+    height: 60px;
     text-align: center;
-
 }
-.fa-arrow-alt-circle-right {
-    margin: auto;
-    min-width: 300px;
-    min-height: 50px;
-}
-
-#from-currency,#amount,[name=amount],#to-currency{
-    max-width: 150px;
-}
-.fa-exchange-alt{
-    min-width: 100px;
+.container .wrapper .buttonbox2{
+    margin: 5px 10px 0 0;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
 }
 
-@media screen and (max-width: 650px){
-    .fa-arrow-alt-circle-right, .fa-exchange-alt,[name=amount],#from-currency,#to-currency,#amount{
-        margin: auto;
-        min-width: 450px;
-    } 
-    #amount,#outputAmount{
-        min-height: 30px;
+.container .wrapper .box select,input,
+.container .wrapper .box input{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.outerlayer .container #display{
+    color: #fff;
+    text-align: center;
+}
+.outerlayer .container #display h1{ 
+    font-size: 120px;
+}
+.outerlayer .container #display h5{
+    font-size: 40px;
+} 
+
+@media (max-width: 984px){
+    body .outerlayer .container .labelbox{
+        display:none;
+        transition: 1s;
     }
+    .container{
+        width:100%;
+        transition: 1s;
+    }
+}
+@media (max-width: 800px){
+    
+    .container .wrapper .box{
+        width: 700px;
+        transition: 1s;
 
+    }
+    .container .wrapper .buttonbox1,.buttonbox2{
+        width: 700px;
+        transition: 1s;
+    }
+    body .outerlayer .container .labelbox{
+        display:none;
+        transition: 1s;
+    }
+    .container{
+        width:100%;
+        transition: 1s;
+    }
+    
 }
